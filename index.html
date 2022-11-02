@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <div class="rating-component">
+          <div class='rating-component__container'>
+            <div class="rating-component__content">
+              <div class="rating-component__star star">
+                <img src="./images/icon-star.svg" alt="icon-star"></img>
+              </div>
+              <div class="rating-component__rcfeedback-about">
+                <h2 class="rcfeedback-about__title">How did we do?</h2>
+                <p class="rcfeedback-about__text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</щ>
+              </div>
+              <ul class="rating-component__items">
+                <li>
+                  <button tabindex="1" class="rating-item">1</button>
+                </li>
+                <li>
+                  <button tabindex="2" class="rating-item">2</button>
+                </li >
+                <button tabindex="3" class="rating-item">3</button>
+                <li>
+                  <button tabindex="4" class="rating-item">4</button>
+                </li>
+                <li>
+                  <button tabindex="5" class="rating-item">5</button>
+                </li>
+              </ul>
+              <button tabindex="6" class="rating-component__button-submit button-submit">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="thank-you _hidden">
+          <div class='thank-you__container'>
+            <div class="thank-you__content">
+              <div class="thank-you__illustration">
+                <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you">
+              </div>
+              <div class="thank-you__selected-rating selected-rating">
+                  <p class="selected-rating__text">You selected <span></span> out of 5</p>
+              </div>
+              <div class="thank-you__tyfeedback">
+                <h2 class="tyfeedback__title">Thank you!</h2>
+                <p class="tyfeedback__text">  We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.frontendmentor.io/profile/Feakstal">Feakstal</a>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+@import 'clear-style', 'variables';
+
+html,body{
+  height: 100%;
+  line-height: 1;
+}
+
+body { 
+  background-color: $veryDarkBlue;
+  color: $white;
+  font-family: $ffOverpass;
+  font-size: $phFontSize;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+[class*="__container"] {
+  margin: 0px auto;
+  max-width: 1410px;
+  padding: 0px 15px;
+}
+
+/* PC */
+@media (max-width: 1410px) {
+  [class*="__container"] {
+      max-width: 970px;
+  }
+}
+/* TABLET  */
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+      max-width: 750px;
+  }
+}
+/* MOBILE */
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+      max-width: none;
+  }
+}
+/* MOBILE SMALL */
+@media (max-width: 479.98px) {
+
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.footer {
+  padding: 0 15px 50px 15px;
+}
+
+.rating-component {
+  margin: 0 0 30px 0;
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  &__content {
+    background-color: $darkBlue;
+    border-radius: 20px;
+    padding: 25px;
+  }
+  &__star {
+    margin: 0 0 30px 0;
+  }
+
+  &__rcfeedback-about {
+    margin: 0 0 20px 0;
+  }
+
+  &__items {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 0 0 25px 0;
+  }
+}
+
+.star {
+  img {
+    background-color: hsla(216, 12%, 54%, 0.1);
+    border-radius: 50%;
+    padding: 14px;
+    user-select: none; 
+  }
+}
+
+.rcfeedback-about {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    color: $lightGrey;
+    line-height: 25px;
+    max-width: 350px;
+    word-spacing: 1.2px;
+  }
+}
+
+.rating-item {
+  background-color: hsla(216, 12%, 54%, 0.1);
+  border-radius: 50%;
+  color: $lightGrey;
+  font-weight: 700;
+  height: 50px;
+  padding: 18px;
+  text-align: center;
+  transition: all ease .2s;
+  user-select: none; 
+  width: 50px;
+  
+  &:hover {
+    background-color: $orange;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $lightGrey;
+    color: $white;
+  }
+}
+
+.button-submit {
+  background-color: $orange;
+  border-radius: 20px;
+  color: $white;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  margin: 0px auto;
+  min-width: 342px;
+  padding: 12px 0;
+  text-transform: uppercase;
+  transition: all ease .2s;
+  user-select: none; 
+
+  &:hover, &:active {
+    background-color: $white;
+    color: $orange;
+  }
+}
+
+.thank-you {
+  margin: 0 0 30px 0;
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  &__content {
+    background-color: $darkBlue;
+    border-radius: 25px;
+    padding: 25px;
+  }
+
+  &__illustration {
+    display: flex;
+    padding: 10px 0 0 0;
+    margin: 0 0 30px 0;
+    justify-content: center;
+  }
+
+  &__selected-rating {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px 0;
+  }
+}
+
+.selected-rating {
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    background-color: hsla(216, 12%, 54%, 0.1);
+    border-radius: 20px;
+    padding: 10px 17px 7px;
+    color: $orange;
+  }
+}
+
+._hidden {
+  display: none;
+}
+
+.tyfeedback {
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    text-align: center;
+    color: $lightGrey;
+    line-height: 25px;
+    max-width: 350px;
+    word-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .rating-component {
+    &__content {
+      padding: 15px;
+    }
+
+    &__items {
+      gap: 22px;
+    }
+  }
+
+  .rcfeedback-about {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 14px;
+      max-width: 290px;
+    }
+  }
+
+  .rating-item {
+    height: 45px;
+    padding: 15px;
+    width: 45px;
+  }
+
+  .button-submit {
+    min-width: 312px;
+    padding: 12px 0;
+  }
+
+
+  .tyfeedback {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 14px;
+      max-width: 350px;
+    }
+  }
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+
+  a { 
+    color: hsl(228, 45%, 44%); 
+  }
+}
